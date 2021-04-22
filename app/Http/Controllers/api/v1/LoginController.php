@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function login(Request $request){
         $login = $request->validate([
-            'email'=>'required|string', 
+            'email'=>'required|string|email', 
             'password'=> 'required|string' 
         ]);
  
