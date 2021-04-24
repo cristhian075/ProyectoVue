@@ -48,4 +48,16 @@ class UserController extends Controller
         $user->save();
         return response()->json(['user' => $user]);
     }
+
+    public function update(Request $request){
+        $user = User::findOrFail($request->id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if ($request->password) {
+            $user->password = Hash::make($request->password);
+        }
+        $user->save();
+        return response()->json(['user' => $user]);
+
+    }
 }

@@ -58,7 +58,18 @@ const actions = {
             password: user.password
         })
         console.log(response)
+    },
+
+    async updateUser({commit}, user){
+        const response = await axios.put('user/users/update', {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            password: user.password
+        })
+        console.log(response)
     }
+    
 }
 const mutations = {
     SET_MESSAGE(state, data) {
