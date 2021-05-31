@@ -1,6 +1,6 @@
 <template>
     <div>
-     <h1 style="color: #009DFF">Productos</h1>
+     <h1>Productos</h1>
      <v-item-group
         multiple>
             <v-row>

@@ -17,7 +17,6 @@ Route::prefix('/product')->group( function(){
 });
 
 Route::prefix('/category')->group( function(){
-    Route::middleware('auth:api')->get('/categories','api\v1\CategoryController@index'); 
+    Route::middleware('auth:api')->get('/category','api\v1\CategoryController@index'); 
 });
-
 

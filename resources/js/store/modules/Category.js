@@ -1,14 +1,13 @@
 import axios from 'axios';
 
-const state = {}
+const status = {}
 const actions = {
     async getList() {
-         const response = await axios.get('category/categories')
-         console.log(response)
+         const response = await axios.get('category/category')
     }
 }
 const mutations = {}
 
 export default {
-    state, actions, mutations, namespaced:true
+    state, actions, mutations, namespace:true
 }
