@@ -42,6 +42,7 @@
                     v-model="user.password"
                   />
                   <div class="text-error">{{message}}</div>
+                  <div class="text-error" v-for="(error, index) in errorMenssage" :key="index" v-text="error">{{errorMenssage}}</div>
                 </v-form>
               </v-card-text>
              
@@ -68,7 +69,7 @@ import { mapState } from 'vuex'
     }),
 
     computed: {
-      ...mapState('user', ['message']),
+      ...mapState('user', ['message', 'errorMenssage']),
     },
  
     methods: {

@@ -10,9 +10,42 @@
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Dashboard</v-list-item-title>
+            <v-list-item-title>Panel administrativo</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+         <v-list-group
+              :prepend-icon="model ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+              append-icon=""
+              color="#15638A"
+            >
+              <template v-slot:activator>
+                <v-list-item-content>
+                  <v-list-item-title>
+                    Inventario
+                  </v-list-item-title>
+              </v-list-item-content>
+              </template>
+               <v-list-item link color="#15638A" to="/product">
+                   <v-list-item-action>
+                    <v-icon>mdi-shopping</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title>
+                        Productos
+                    </v-list-item-title>
+                  </v-list-item-content>
+              </v-list-item>
+              <v-list-item link color="#15638A" to="/category">
+                   <v-list-item-action>
+                    <v-icon>mdi-tag-multiple</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title>
+                        Categorias
+                    </v-list-item-title>
+                  </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
           <v-list-group
               :prepend-icon="model ? 'mdi-chevron-up' : 'mdi-chevron-down'"
               append-icon=""
@@ -51,7 +84,7 @@
             <v-icon>mdi-power</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Log Out</v-list-item-title>
+            <v-list-item-title>Cerrar sesion</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
